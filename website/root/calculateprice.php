@@ -159,7 +159,7 @@ if($calcPrice == true){
                             <td>&euro; <?php echo  FormatNumber($totalPriceC); ?></td>
                         </tr>
                         <tr>
-                            <td>Prijs extra's (<?php echo $additionNames;?>):</td>
+                            <td>Prijs extra's (<?php echo $additionNames;?></td>
                             <td>&euro; <?php echo  FormatNumber($totalAdditions); ?></td>
                         </tr>
                     </tbody>

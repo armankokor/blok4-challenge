@@ -60,7 +60,6 @@ include 'includes/filter.php';
                 <!-- als er geen resultaat getoond kan worden omdat er 0 resultaat is op het filter de volgende melding tonen -->
                 <!-- de variabele $selection in filter.php gebruiken om te laten zien waar op gefiltert is -->
                 <div class="col-12">
-                    <div class="alert alert-warning" role="alert">Helaas er zijn geen huisjes met de volgende selectie: <?php echo $selection; ?> </div>
                 </div>
             <!-- <?php //} //einde if
             // else { //count($tblCottages) > 0 ?> -->
@@ -76,8 +75,8 @@ include 'includes/filter.php';
                                 <h5 class="card-title"><?php echo $cottage['cottage_name'];?></h5> <!-- maak naam dynamisch -->
                                 <p class="card-text"><?php echo $cottage['cottage_excerpt'];?></p> <!-- maak omschrijving dynamisch -->
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item"><?php echo $cottage['cottage_price_a'];?></li><!-- maak prijs volwassenen dynamisch -->
-                                    <li class="list-group-item"><?php echo $cottage['cottage_price_c'];?></li><!-- maak prijs kinderen dynamisch -->
+                                    <li class="list-group-item">&euro; <?php echo $cottage['cottage_price_a'];?> per nacht voor volwassenen</li><!-- maak prijs volwassenen dynamisch -->
+                                    <li class="list-group-item">&euro; <?php echo $cottage['cottage_price_c'];?> per nacht voor kinderen</li><!-- maak prijs kinderen dynamisch -->
                                 </ul>
                                 <a href="huisjes.php?cottageID=<?php echo  $cottage['cottage_id']; ?>" class="btn btn-secondary mt-2">Lees meer...</a><!-- maak href dynamisch -->
                             </div>

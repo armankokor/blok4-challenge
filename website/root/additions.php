@@ -9,4 +9,3 @@ $tblAdditions = getData("", "fetchAll");
                             <li class="list-group-item"><?php echo $addition["addition_name"];?> &euro; <?php echo $addition["addition_price"];?></li>
                         <?php } //end foreach ?>
                     </ul>
-                    .

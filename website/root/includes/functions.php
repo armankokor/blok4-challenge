@@ -15,11 +15,11 @@ function getData($sql, $method){
     //de waarde van de $method variabele komt uit de parameter $method die je bij het aanroepen van de functie als argument meegeeft
     if($method == 'fetch'){
         //$result wordt nu gevuld met een array die de waarde van de opgevraagde database tabel rij en kolommen bevat, fetch geeft alleen de eerste rij terug
-        $result = $statement->fetch(PDO::FETCH_BOTH);
+        $result = $statement->fetch(PDO::FETCH_ASSOC);
     }
     else {
         //$result wordt nu gevuld met een array die de waarde van de opgevraagde database tabel rijen en kolommen bevat, fetchAll geeft alle rijen terug
-        $result = $statement->fetchAll(PDO::FETCH_BOTH); 
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC); 
     }
 
     //return geeft de waarde terug aan de variabele waar je de functie hebt aangeroepen
@@ -30,7 +30,7 @@ function getData($sql, $method){
 //gebruik deze functie voor het juist formateren van nummers
 function FormatNumber($num){
 
-    //syntax = number_format(number,decimals,decimalpoint,separator)
+ return   number_format($num,2, "," , ".");
 
     //maak de functie af
     //return ....
